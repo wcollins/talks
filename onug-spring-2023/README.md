@@ -1,3 +1,6 @@
+### Overview
+This repo contains the _slide deck_ and code used at this [ONUG 2023 session.](https://onug.net/events/onug-training-featuring-alkira-using-modern-practices-and-tools-to-operate-networking-in-the-cloud/)
+
 ![Session](./session.png)
 
 ## Session: Using Modern Practices and Tools to Operate Networking in the Cloud
@@ -6,9 +9,6 @@ As the public cloud continues to gain momentum, the gap broadens between operati
 - Building basic AWS networking with _Terraform and Python_
 - Expanding the scope to multi-cloud with _Network-as-a-Service_
 - Benefits of standardized toolchain for managing infrastructure
-
-### Overview
-This repo contains the _slide deck_ and code used at this [ONUG 2023 session.](https://onug.net/events/onug-training-featuring-alkira-using-modern-practices-and-tools-to-operate-networking-in-the-cloud/)
 
 ### Provisioning Infrastructure with Terraform
 ```hcl
