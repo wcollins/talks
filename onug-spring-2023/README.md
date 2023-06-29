@@ -1,5 +1,5 @@
 ### Overview
-This repo contains the _slide deck_ and code used at this [ONUG 2023 session.](https://onug.net/events/onug-training-featuring-alkira-using-modern-practices-and-tools-to-operate-networking-in-the-cloud/)
+This repo contains the _slide deck_ and code used at this [ONUG 2023 session.](https://onug.net/events/onug-training-featuring-alkira-using-modern-practices-and-tools-to-operate-networking-in-the-cloud/) You can find the entire recorded session at [https://vimeo.com/837406953](https://vimeo.com/837406953).
 
 ![Session](./session.png)
 
