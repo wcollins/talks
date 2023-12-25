@@ -1,5 +1,5 @@
 ### Overview
-This repo contains the _slide deck_ and [Terraform](https://www.terraform.io/) used at the [2023's DC Summit](https://aws.amazon.com/events/summits/washington-dc/).
+This repo contains the _slide deck_ and [Terraform](https://www.terraform.io/) used at the [2023's DC Summit](https://aws.amazon.com/events/summits/washington-dc/). You can find the entire recorded session at [https://www.youtube.com/watch?v=OzPJ4QesuSI](https://www.youtube.com/watch?v=OzPJ4QesuSI).
 
 ![Session](./session.png)
 
