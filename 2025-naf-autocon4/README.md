@@ -109,7 +109,7 @@ AI-native tool interface:
 
 #### Step 1: Configure Claude Desktop
 
-**macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
+**macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`  
 **Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
 
 You can use the provided example config as a template:
