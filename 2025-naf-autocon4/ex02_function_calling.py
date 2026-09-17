@@ -44,7 +44,7 @@ def lookup_player_id(player_name: str) -> Optional[int]:
     try:
         response = requests.get(
             url,
-            params={"q": player_name},
+            params={"culture": "en-us", "q": player_name},
             headers=headers,
             timeout=5
         )
@@ -52,7 +52,9 @@ def lookup_player_id(player_name: str) -> Optional[int]:
         data = response.json()
 
         if data and len(data) > 0:
-            return data[0].get("playerId")
+            player_id = data[0].get("playerId")
+            # API returns playerId as string, convert to int
+            return int(player_id) if player_id else None
         return None
     except Exception as e:
         print(f"Error looking up player: {e}")

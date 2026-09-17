@@ -1,9 +1,9 @@
 {
   "mcpServers": {
     "nhl-stats": {
-      "command": "/REPLACE/WITH/ABSOLUTE/PATH/TO/talks/2025-naf-autocon4/.venv/bin/python",
+      "command": "/absolute/path/to/talks/2025-naf-autocon4/.venv/bin/python",
       "args": [
-        "/REPLACE/WITH/ABSOLUTE/PATH/TO/talks/2025-naf-autocon4/ex04_mcp_server.py"
+        "/absolute/path/to/talks/2025-naf-autocon4/ex04_mcp_server.py"
       ]
     }
   }
