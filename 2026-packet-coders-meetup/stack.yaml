@@ -1,0 +1,92 @@
+version: "1"
+name: packet-coders
+
+gateway:
+  name: packet-coders
+  bind: "0.0.0.0"
+  allowed_hosts:
+    - "172.16.10.10"
+  insecure_allow_unauthenticated: true
+
+  # code_mode: "on"
+  # output_format: toon
+
+network:
+  name: packet-coders
+  driver: bridge
+
+link:
+  - client: opencode
+    client_id: opencode
+  - client: claude-code
+    client_id: claude-code
+
+mcp-servers:
+
+  - name: time
+    image: mcp/time@sha256:9c46a918633fb474bf8035e3ee90ebac6bcf2b18ccb00679ac4c179cba0ebfcf
+    transport: stdio
+    protocol_generation: handshake
+    command: [--local-timezone=UTC]
+
+  # - name: deepwiki
+  #   url: https://mcp.deepwiki.com/mcp
+  #   transport: http
+
+  # - name: fetch
+  #   source:
+  #     type: pypi
+  #     package: mcp-server-fetch
+  #     ref: 2026.8.18
+
+  # - name: petstore
+  #   openapi:
+  #     spec: https://petstore3.swagger.io/api/v3/openapi.json
+  #     baseUrl: https://petstore3.swagger.io/api/v3
+  #     operations:
+  #       include: [findPetsByStatus, getPetById]
+
+  # - name: calculator
+  #   image: python:3.13-alpine@sha256:7415fbc3c9e4979cc717d92377ab2bc7b2b4a2af1ac03cc52b5f3f88efedaf3a
+  #   transport: http
+  #   port: 8000
+  #   ready_timeout: 3m
+  #   command:
+  #     - sh
+  #     - -ec
+  #     - pip install --no-cache-dir 'mcp==1.26.0' >&2; exec python /app/server.py
+  #   configs:
+  #     - target: /app/server.py
+  #       content: |
+  #         from mcp.server.fastmcp import FastMCP
+
+  #         mcp = FastMCP("Addition", host="0.0.0.0", port=8000, json_response=True)
+
+  #         @mcp.tool()
+  #         def add(a: int, b: int) -> int:
+  #             """Add two integers."""
+  #             return a + b
+
+  #         mcp.run(transport="streamable-http")
+
+  # - name: playwright
+  #   command: [npx, -y, "@playwright/mcp@0.0.80", --browser, chrome, --isolated]
+
+# groups:
+#   research:
+#     description: Read-only research bundle at /groups/research/mcp
+#     servers: [deepwiki, fetch]
+#     exclude: [deepwiki__read_wiki_contents]
+
+# clients:
+#   default: deny
+#   profiles:
+#     opencode: {}
+#     claude-code:
+#       servers: [deepwiki, time, fetch, petstore]
+
+# limits:
+#   rate_limits:
+#     - tool: time__get_current_time
+#       calls_per_minute: 3
+#       burst: 3
